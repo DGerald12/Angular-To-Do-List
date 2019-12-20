@@ -1,0 +1,24 @@
+  <div align="center">
+    <input type="text" #newTask align="center" />
+    <button (click)="addTask(newTask.value); newTask.value=''">Add New Task</button>
+    <br>
+    <br>
+  </div>
+  
+  
+  <table align="center">
+    <tr>
+      <th>Task</th>
+      <th style="text-align:center">Priority</th>
+      <th style="text-align:center">Done</th>
+      <th style="text-align:center">Actions</th>
+    </tr>
+    <tr *ngFor="let task of tasks">
+      <td> <a [routerLink]="['/', task.id]">{{task.label}}</a> </td>
+      <td td style="text-align:center">{{task.priority}}</td>
+      <td td style="text-align:center">{{task.done ? '&#10003;' : '&#10005;'}}</td>
+      <td>
+        <button (click)="deleteTask(task)">Delete</button>
+      </td>
+    </tr> 
+  </table>

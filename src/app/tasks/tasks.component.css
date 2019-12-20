@@ -1,0 +1,26 @@
+td 
+{
+    background: bisque;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+th
+{
+    background: lightskyblue;
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+input 
+{
+    height: 30px;
+    width: 300px;
+}
+
+button
+{
+    background: lightskyblue;
+    color: black;
+}
